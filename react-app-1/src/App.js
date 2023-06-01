@@ -3,6 +3,24 @@ import './App.css';
 
 const App = () => {
   return (
+    <div>
+      <Header />
+      <Technologies />
+    </div>);
+}
+
+const Header = () => {
+  return (
+    <div>
+      <a href="#">Home</a>
+      <a href="#">News Feed</a>
+      <a href="#">Messages</a>
+    </div>
+  );
+}
+
+const Technologies = () => {
+  return (
     <div className="App">
       <ul>
         <li>html</li>
@@ -13,5 +31,7 @@ const App = () => {
     </div>
   );
 }
+
+
 
 export default App;
