@@ -1,7 +1,8 @@
 import React from 'react';
+import s from './Profile.module.css';
 
 const Profile = () => {
-    return <main className='content'>
+    return <main className={s.content}>
     <div>
       <img src='https://marketplace.canva.com/MADQ5PeveDs/1/screen_2x/canva-galaxy-in-outter-space-MADQ5PeveDs.jpg' alt='space' />
     </div>

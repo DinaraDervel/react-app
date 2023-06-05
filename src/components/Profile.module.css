@@ -1,0 +1,7 @@
+.content {
+  grid-area: content;
+}
+.content img {
+  width: 1380px;
+  max-width: 100%;
+}
