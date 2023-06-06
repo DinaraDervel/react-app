@@ -1,7 +1,41 @@
 .content {
   grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.picture {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 .content img {
-  width: 1380px;
   max-width: 100%;
+}
+.decription {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+.avatar {
+  width: 200px;
+}
+.decription h2 {
+  font-family: var(--head-font);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.decription p {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.myposts {
+  width: 1000px;
+  max-width: 100%;
+}
+h1 {
+  font-family: var(--head-font);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }

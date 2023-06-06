@@ -6,6 +6,7 @@
     rgba(118, 133, 210, 1) 9%,
     rgba(79, 184, 177, 0.8856792717086834) 100%
   );
+  font-family: var(--body-font);
 }
 .vertical_nav {
   list-style-type: none;
@@ -14,9 +15,10 @@
 }
 .vertical_nav li a {
   display: block;
-  color: #000;
+  color: #32387e;
   padding: 8px 0 8px 16px;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 .vertical_nav a.active {
   background-color: #04aa6d;
