@@ -1,0 +1,35 @@
+.myposts {
+  max-width: 800px;
+  width: 100%;
+}
+h1 {
+  font-family: var(--head-font);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.form textarea {
+  flex-basis: 100%;
+  border: 1px solid rgba(114, 152, 149, 0.959);
+  border-radius: 5px;
+  resize: none;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  background-color: rgba(121, 210, 204, 0.194);
+  padding: 5px;
+}
+.form input {
+  width: 20%;
+  align-self: flex-end;
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  background-color: #1c2047cb;
+  color: beige;
+  padding: 5px;
+}

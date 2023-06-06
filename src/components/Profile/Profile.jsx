@@ -1,5 +1,7 @@
 import React from 'react';
 import s from './Profile.module.css';
+import MyPosts from './MyPosts/MyPosts';
+
 
 const Profile = () => {
     return <main className={s.content}>
@@ -16,23 +18,7 @@ const Profile = () => {
         <p>Web-site: <span>www.joan-h.com</span></p>
       </section>
     </div>
-    <div className={s.myposts}>
-      <h1>My posts</h1>
-      <form className={s.form}>
-          <textarea name="newpost" id="newpost" cols="100" rows="2" placeholder='your news..' required></textarea>
-          <input type="submit" value="Send" />
-      </form>
-      <div className={s.posts}>
-        <div className={s.post}>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4LPcMraeZ1ra8qRl1m2IacMAbIAxBUVlzQ&usqp=CAU" alt="small_avatar" />
-          <p>Sweet! So, what do you wanna do today?</p>
-        </div>
-        <div className={s.post}>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4LPcMraeZ1ra8qRl1m2IacMAbIAxBUVlzQ&usqp=CAU" alt="small_avatar" />
-          <p>Sweet! So, what do you wanna do today?</p>
-        </div>
-      </div>
-    </div>
+    <MyPosts />
   </main>;
 }
 
