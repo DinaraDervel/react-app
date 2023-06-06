@@ -11,8 +11,8 @@
   --head-font: "Poppins", sans-serif;
 }
 .app-wrapper {
-  width: 1440px;
-  max-width: 100%;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 60px 1fr;

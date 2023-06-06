@@ -18,16 +18,19 @@ const Profile = () => {
     </div>
     <div className={s.myposts}>
       <h1>My posts</h1>
-      <div>
-        New post
-      </div>
-    </div>
-    <div>
-      <div>
-        post 1
-      </div>
-      <div>
-        post 2
+      <form className={s.form}>
+          <textarea name="newpost" id="newpost" cols="100" rows="2" placeholder='your news..' required></textarea>
+          <input type="submit" value="Send" />
+      </form>
+      <div className={s.posts}>
+        <div className={s.post}>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4LPcMraeZ1ra8qRl1m2IacMAbIAxBUVlzQ&usqp=CAU" alt="small_avatar" />
+          <p>Sweet! So, what do you wanna do today?</p>
+        </div>
+        <div className={s.post}>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4LPcMraeZ1ra8qRl1m2IacMAbIAxBUVlzQ&usqp=CAU" alt="small_avatar" />
+          <p>Sweet! So, what do you wanna do today?</p>
+        </div>
       </div>
     </div>
   </main>;
