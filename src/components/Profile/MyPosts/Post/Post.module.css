@@ -21,3 +21,9 @@
   font-family: var(--body-font);
   font-size: 1.1rem;
 }
+.like {
+  float: right;
+  color: #aaa;
+  font-family: var(--body-font);
+  font-size: 1rem;
+}

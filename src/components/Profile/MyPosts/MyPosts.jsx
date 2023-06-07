@@ -18,8 +18,8 @@ const MyPosts = () => {
         <input type="submit" value="Send" />
       </form>
       <div className={s.posts}>
-        <Post />
-        <Post />
+        <Post message="Sweet! So, what do you wanna do today?" likes="15" />
+        <Post message="Hi! It's my first post" likes="30" />
       </div>
     </div>
   );
