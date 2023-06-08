@@ -22,3 +22,8 @@
     "header header"
     "nav content";
 }
+.app-wrapper-content {
+  max-width: 1000px;
+  width: 100%;
+  grid-area: content;
+}

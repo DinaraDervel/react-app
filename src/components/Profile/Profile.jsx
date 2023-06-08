@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = () => {
   return (
-    <main className={s.content}>
+    <main className={s.container}>
       <div className={s.picture}>
         <img
           src="https://marketplace.canva.com/MADQ5PeveDs/1/screen_2x/canva-galaxy-in-outter-space-MADQ5PeveDs.jpg"
@@ -12,12 +12,12 @@ const Profile = () => {
         />
       </div>
       <div className={s.decription}>
-        <div className={s.avatar}>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Y-GdHiZ402GuKd211B9oz-s4AdIdoEjKKw&usqp=CAU"
-            alt="avatar"
-          />
-        </div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Y-GdHiZ402GuKd211B9oz-s4AdIdoEjKKw&usqp=CAU"
+          alt="avatar"
+          className={s.avatar}
+        />
+
         <section>
           <h2>Joan H.</h2>
           <p>
