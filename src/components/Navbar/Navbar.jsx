@@ -6,21 +6,21 @@ const Navbar = () => {
     <nav className={s.nav}>
       <ul className={s.vertical_nav}>
         <li>
-          <a className={s.active} href="#a">
+          <a className={s.active} href="/profile">
             Profile
           </a>
         </li>
         <li>
-          <a href="#a">Messages</a>
+          <a href="/dialogs">Messages</a>
         </li>
         <li>
-          <a href="#a">News</a>
+          <a href="/news">News</a>
         </li>
         <li>
-          <a href="#a">Music</a>
+          <a href="/music">Music</a>
         </li>
         <li>
-          <a href="#a">Settings</a>
+          <a href="/settings">Settings</a>
         </li>
       </ul>
     </nav>
