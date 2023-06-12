@@ -1,26 +1,50 @@
 import React from "react";
 import s from "./Navbar.module.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className={s.nav}>
       <ul className={s.vertical_nav}>
         <li>
-          <a className={s.active} href="/profile">
+          <NavLink
+            className={(navData) => (navData.isActive ? s.activeLink : "")}
+            to="/profile"
+          >
             Profile
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="/dialogs">Messages</a>
+          <NavLink
+            className={(navData) => (navData.isActive ? s.activeLink : "")}
+            to="/dialogs"
+          >
+            Messages
+          </NavLink>
         </li>
         <li>
-          <a href="/news">News</a>
+          <NavLink
+            className={(navData) => (navData.isActive ? s.activeLink : "")}
+            to="/news"
+          >
+            News
+          </NavLink>
         </li>
         <li>
-          <a href="/music">Music</a>
+          <NavLink
+            className={(navData) => (navData.isActive ? s.activeLink : "")}
+            to="/music"
+          >
+            Music
+          </NavLink>
         </li>
         <li>
-          <a href="/settings">Settings</a>
+          <NavLink
+            className={(navData) => (navData.isActive ? s.activeLink : "")}
+            to="/settings"
+          >
+            Settings
+          </NavLink>
         </li>
       </ul>
     </nav>
