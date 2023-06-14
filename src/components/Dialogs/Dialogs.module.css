@@ -12,11 +12,15 @@ h1 {
   font-family: var(--body-font);
   font-size: 1.5rem;
 }
-.dialogsItems .active {
+
+.active {
   color: blueviolet;
 }
 .dialog {
   padding: 10px;
+}
+.dialog a {
+  text-decoration: none;
 }
 .messages {
   padding: 150px 10px 10px 10px;
