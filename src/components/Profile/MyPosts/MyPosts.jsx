@@ -3,6 +3,18 @@ import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = () => {
+  let posts = [
+    {
+      id: 1,
+      message: "Sweet! So, what do you wanna do today?",
+      likesCount: 12,
+    },
+    { id: 2, message: "Hi! It's my first post", likesCount: 11 },
+  ];
+  let postsElements = posts.map((p) => (
+    <Post message={p.message} likes={p.likesCount} />
+  ));
+
   return (
     <div className={s.myposts}>
       <h1>My posts</h1>
@@ -17,10 +29,7 @@ const MyPosts = () => {
         ></textarea>
         <input type="submit" value="Send" />
       </form>
-      <div className={s.posts}>
-        <Post message="Sweet! So, what do you wanna do today?" likes="15" />
-        <Post message="Hi! It's my first post" likes="30" />
-      </div>
+      <div className={s.posts}>{postsElements}</div>
     </div>
   );
 };
