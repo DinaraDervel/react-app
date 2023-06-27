@@ -1,4 +1,4 @@
-.nav {
+.sidebar {
   grid-area: nav;
   background: rgb(118, 133, 210);
   background: radial-gradient(
@@ -20,7 +20,34 @@
   text-decoration: none;
   font-size: 1.5rem;
 }
-.activeLink {
+.vertical_nav li .activeLink {
   background-color: #04aa6d;
   color: white;
+}
+.friendsContainer {
+  padding: 38px 16px;
+}
+.friendsContainer h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #32387e;
+}
+.friends {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.friend {
+  flex-basis: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #32387e;
+}
+.avatar {
+  width: 50px;
+  max-width: 100%;
 }
