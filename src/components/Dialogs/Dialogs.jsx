@@ -17,7 +17,20 @@ const Dialogs = (props) => {
         <h1>Dialogs</h1>
         <ul className={s.dialogsItems}>{dialogsElements}</ul>
       </div>
-      <div className={s.messages}>{messagesElements}</div>
+      <div className={s.messages}>
+        {messagesElements}
+        <form className={s.form}>
+          <textarea
+            name="newmessage"
+            id="newpost"
+            cols="100"
+            rows="2"
+            placeholder="your message.."
+            required
+          ></textarea>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
     </main>
   );
 };
