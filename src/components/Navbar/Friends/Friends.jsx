@@ -3,7 +3,7 @@ import s from "./../Navbar.module.css";
 
 const Friends = (props) => {
   let friendsElements = props.state.friends.map((f) => (
-    <FriendItem name={f.name} />
+    <FriendItem name={f.name} key={f.name} />
   ));
   return (
     <div className={s.friendsContainer}>

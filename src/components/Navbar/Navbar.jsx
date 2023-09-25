@@ -5,7 +5,7 @@ import Friends from "./Friends/Friends";
 
 const Navbar = (props) => {
   return (
-    <sidebar className={s.sidebar}>
+    <div className={s.sidebar}>
       <nav>
         <ul className={s.vertical_nav}>
           <li>
@@ -51,7 +51,7 @@ const Navbar = (props) => {
         </ul>
       </nav>
       <Friends state={props.friends} />
-    </sidebar>
+    </div>
   );
 };
 

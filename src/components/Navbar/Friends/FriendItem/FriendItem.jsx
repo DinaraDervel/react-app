@@ -6,7 +6,7 @@ const FriendItem = (props) => {
       <img
         src="https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f47d.svg"
         alt="friend avatar"
-        class={s.avatar}
+        className={s.avatar}
       />
       {props.name}
     </div>
