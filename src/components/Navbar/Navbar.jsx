@@ -50,7 +50,7 @@ const Navbar = (props) => {
           </li>
         </ul>
       </nav>
-      <Friends state={props.friends} />
+      {/* <Friends state={props.friends} /> */}
     </div>
   );
 };
