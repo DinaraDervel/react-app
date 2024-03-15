@@ -1,33 +1,15 @@
+import axios from "axios";
 import styles from "./Users.module.css";
+import userPhoto from "../../assets/images/null_avatar.svg";
 
 let Users = (props) => {
-  if (props.users.length === 0)
-    props.setUsers([
-      {
-        id: 1,
-        photoURL: "https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f47d.svg",
-        followed: false,
-        fullname: "Jhon",
-        status: "I rock",
-        location: { country: "US", city: "Old York" },
-      },
-      {
-        id: 2,
-        photoURL: "https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f47d.svg",
-        followed: true,
-        fullname: "Mellisa",
-        status: "Show must go on",
-        location: { country: "Australia", city: "Sydney" },
-      },
-      {
-        id: 3,
-        photoURL: "https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f47d.svg",
-        followed: false,
-        fullname: "Ben",
-        status: "Tik-tak",
-        location: { country: "Britain", city: "Older York" },
-      },
-    ]);
+  if (props.users.length === 0) {
+    axios
+      .get("https://social-network.samuraijs.com/api/1.0/users")
+      .then((response) => {
+        props.setUsers(response.data.items);
+      });
+  }
 
   return (
     <div>
@@ -35,7 +17,11 @@ let Users = (props) => {
         <div key={el.id}>
           <span>
             <div>
-              <img src={el.photoURL} alt="user" className={styles.userPhoto} />
+              <img
+                src={el.photos.small != null ? el.photos.small : userPhoto}
+                alt="user"
+                className={styles.userPhoto}
+              />
             </div>
             <div>
               {el.followed ? (
@@ -59,12 +45,12 @@ let Users = (props) => {
           </span>
           <span>
             <span>
-              <div>{el.fullname}</div>
+              <div>{el.name}</div>
               <div>{el.status}</div>
             </span>
             <span>
-              <div>{el.location.country}</div>
-              <div>{el.location.city}</div>
+              <div>el.location.country</div>
+              <div>el.location.city</div>
             </span>
           </span>
         </div>
