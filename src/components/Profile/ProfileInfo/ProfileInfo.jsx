@@ -1,7 +1,18 @@
 import React from "react";
 import s from "./ProfileInfo.module.css";
+import { Preloader } from "../../common/Preloader/Preloader";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+  if (!props.profile) return <Preloader />;
+  let contacts = [];
+  for (const [key, value] of Object.entries(props.profile.contacts))
+    if (value)
+      contacts.push(
+        <p>
+          {key}: <span>{value}</span>
+        </p>
+      );
+
   return (
     <div className={s.container}>
       <div className={s.picture}>
@@ -12,24 +23,24 @@ const ProfileInfo = () => {
       </div>
       <div className={s.decription}>
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Y-GdHiZ402GuKd211B9oz-s4AdIdoEjKKw&usqp=CAU"
+          src={props.profile.photos.large}
+          // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Y-GdHiZ402GuKd211B9oz-s4AdIdoEjKKw&usqp=CAU"
           alt="avatar"
           className={s.avatar}
         />
         <section>
-          <h2>Joan H.</h2>
+          <h2>{props.profile.fullName}</h2>
           <p>
-            Date of birth: <span>07/24/2033</span>
+            About me: <span>{props.profile.aboutMe}</span>
           </p>
           <p>
-            City: <span>Newest-York</span>
+            Looking for a job:{" "}
+            <span>{props.profile.lookingForAJob ? "yes" : "no"}</span>
           </p>
           <p>
-            Education: <span>Space Academy'53</span>
+            Description: <span>{props.profile.lookingForAJobDescription}</span>
           </p>
-          <p>
-            Web-site: <span>www.joan-h.com</span>
-          </p>
+          <p>Contacts: {contacts}</p>
         </section>
       </div>
     </div>
