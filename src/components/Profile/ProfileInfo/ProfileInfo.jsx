@@ -4,6 +4,7 @@ import { Preloader } from "../../common/Preloader/Preloader";
 
 const ProfileInfo = (props) => {
   if (!props.profile) return <Preloader />;
+
   let contacts = [];
   for (const [key, value] of Object.entries(props.profile.contacts))
     if (value)
@@ -40,7 +41,7 @@ const ProfileInfo = (props) => {
           <p>
             Description: <span>{props.profile.lookingForAJobDescription}</span>
           </p>
-          <p>Contacts: {contacts}</p>
+          <p>Contacts:</p> {contacts}
         </section>
       </div>
     </div>
