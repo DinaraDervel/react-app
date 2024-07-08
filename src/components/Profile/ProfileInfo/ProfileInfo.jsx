@@ -32,7 +32,10 @@ const ProfileInfo = (props) => {
         />
         <section>
           <h2>{props.profile.fullName}</h2>
-          <ProfileStatus status={"Hello my friends!"} />
+          <ProfileStatus
+            status={props.status}
+            updateStatus={props.updateStatus}
+          />
           <p>
             About me: <span>{props.profile.aboutMe}</span>
           </p>
