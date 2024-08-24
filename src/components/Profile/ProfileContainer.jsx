@@ -11,7 +11,7 @@ import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
 
 // wrapper to use react router's v6 hooks in class component(to use HOC pattern, like in router v5)
-function withRouter(Children) {
+export function withRouter(Children) {
   return (props) => {
     const match = { params: useParams() };
     return <Children {...props} match={match} />;
